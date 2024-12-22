@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/funcionalidade">Funcionalidade</a>
+        <a href="/apresentacao">Apresentação</a>
+    </nav>
+    <div class="container">
+        <h1>Bem-vindo ao Projeto Final</h1>
+        <p>Este site apresenta uma solução baseada em dados reais para analisar a evolução do COVID-19.</p>
+        <h2>Informações sobre o conjunto de dados</h2>
+        <ul>
+            <li><strong>Colunas:</strong> {{ dataset_info.columns }}</li>
+            <li><strong>Linhas:</strong> {{ dataset_info.rows }}</li>
+            <li><strong>Fonte:</strong> {{ dataset_info.source }}</li>
+        </ul>
+        <a href="/funcionalidade" class="action-link">Ir para Funcionalidade</a><br>
+        <a href="/apresentacao" class="action-link">Ir para Apresentação</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Análise COVID</p>
+    </footer>
+</body>
+</html>
+
+
+
